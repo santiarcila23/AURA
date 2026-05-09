@@ -10,7 +10,8 @@ Catálogo de lociones de autor con selección de preferencia (Hombre / Unisex / 
 aura/
 ├── index.html    ← Toda la estructura HTML de la página
 ├── styles.css    ← Todos los estilos organizados por bloques BEM
-└── README.md     ← Este archivo
+├── README.md     ← Este archivo  
+└── URL           ← URL de la pagina 
 ```
 
 ---
