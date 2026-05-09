@@ -147,7 +147,11 @@ En el dashboard de Vercel busca el botón **"Add New Project"** y luego seleccio
 Vercel detecta automáticamente que es un proyecto HTML estático y lo publica en segundos. Te entrega una URL pública como:
 
 ```
-https://aura-tuusuario.vercel.app
+
+**URL DE LA PAG 
+https://aura-ten-woad.vercel.app/**
+
+
 ```
 
 **Paso 4 — Actualizar la página**
