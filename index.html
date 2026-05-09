@@ -6,7 +6,7 @@
   <title>AURA — Fragancias de autor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,18 +17,14 @@
   ====================================================== -->
   <nav class="nav">
     <div class="nav__inner">
-
       <span class="nav__logo">AURA</span>
-
       <div class="nav__links">
-        <a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+        <a href="#inicio"   class="nav__link nav__link--active">Inicio</a>
         <a href="#catalogo" class="nav__link">Colecciones</a>
         <a href="#nosotros" class="nav__link">Nosotros</a>
         <a href="#contacto" class="nav__link">Contacto</a>
       </div>
-
-      <button class="nav__cta">Explorar</button>
-
+      <a href="#contacto" class="nav__cta">Comprar</a>
     </div>
   </nav>
 
@@ -36,38 +32,28 @@
   <!-- =====================================================
        BLOQUE: selector
        Elementos: eyebrow | title | subtitle | grid | btn | btn-icon
-       Modificadores: btn--active
-       Nota: JS cambia btn--active al hacer clic
+       Modificadores: btn--active (Unisex por defecto)
+       Nota: los botones son <a> que llevan al catálogo
   ====================================================== -->
   <section class="selector" id="inicio">
-
     <p class="selector__eyebrow">Bienvenido a AURA</p>
-
-    <h1 class="selector__title">
-      El aroma que<br><em>te define</em>
-    </h1>
-
+    <h1 class="selector__title">El aroma que<br><em>te define</em></h1>
     <p class="selector__subtitle">Elige tu preferencia y descubre tu colección</p>
 
     <div class="selector__grid">
-
-      <button class="selector__btn" id="btn-hombre" onclick="selectCategory('hombre')">
+      <a href="#catalogo" class="selector__btn">
         <span class="selector__btn-icon">♂</span>
         Hombre
-      </button>
-
-      <button class="selector__btn selector__btn--active" id="btn-unisex" onclick="selectCategory('unisex')">
+      </a>
+      <a href="#catalogo" class="selector__btn selector__btn--active">
         <span class="selector__btn-icon">◈</span>
         Unisex
-      </button>
-
-      <button class="selector__btn" id="btn-mujer" onclick="selectCategory('mujer')">
+      </a>
+      <a href="#catalogo" class="selector__btn">
         <span class="selector__btn-icon">♀</span>
         Mujer
-      </button>
-
+      </a>
     </div>
-
   </section>
 
   <hr class="divider">
@@ -78,24 +64,17 @@
        Elementos: tag | title | desc | actions | btn
        Modificadores: btn--outline
   ====================================================== -->
-  <section class="hero" id="coleccion">
-
+  <section class="hero">
     <span class="hero__tag">Colección Unisex · 2025</span>
-
-    <h2 class="hero__title">
-      Fragancias que<br><em>trascienden</em> géneros
-    </h2>
-
+    <h2 class="hero__title">Fragancias que<br><em>trascienden</em> géneros</h2>
     <p class="hero__desc">
       Aromas construidos sobre notas de oud, sándalo y ámbar gris.
       Diseñados para quienes no siguen convenciones, solo instintos.
     </p>
-
     <div class="hero__actions">
-      <button class="hero__btn">Ver colección</button>
-      <button class="hero__btn hero__btn--outline">Descubrir notas</button>
+      <a href="#catalogo" class="hero__btn">Ver colección</a>
+      <a href="#contacto" class="hero__btn hero__btn--outline">Contactar</a>
     </div>
-
   </section>
 
 
@@ -106,6 +85,7 @@
     <p class="section-header__eyebrow">Por qué AURA</p>
     <h2 class="section-header__title">Una fragancia,<br><em>una experiencia</em></h2>
   </div>
+
 
   <!-- =====================================================
        BLOQUE: feature-card
@@ -161,14 +141,16 @@
     <h2 class="section-header__title"><em>Colección</em> Unisex</h2>
   </div>
 
+
   <!-- =====================================================
        BLOQUE: product-card
        Elementos: visual | badge | body | name | note | price
        Modificadores: --featured
+       Nota: cada tarjeta es un <a href="#contacto">
   ====================================================== -->
   <div class="catalogue-grid">
 
-    <article class="product-card product-card--featured">
+    <a href="#contacto" class="product-card product-card--featured">
       <div class="product-card__visual">
         🌑
         <span class="product-card__badge">Nuevo</span>
@@ -178,34 +160,34 @@
         <p class="product-card__note">Oud · Sándalo · Ámbar</p>
         <p class="product-card__price">$189.000 COP</p>
       </div>
-    </article>
+    </a>
 
-    <article class="product-card">
+    <a href="#contacto" class="product-card">
       <div class="product-card__visual">🌿</div>
       <div class="product-card__body">
         <h3 class="product-card__name">Cedar Dusk</h3>
         <p class="product-card__note">Cedro · Vetiver · Musgo</p>
         <p class="product-card__price">$165.000 COP</p>
       </div>
-    </article>
+    </a>
 
-    <article class="product-card">
+    <a href="#contacto" class="product-card">
       <div class="product-card__visual">🌊</div>
       <div class="product-card__body">
         <h3 class="product-card__name">Eau Noire</h3>
         <p class="product-card__note">Bergamota · Patchouli · Vainilla</p>
         <p class="product-card__price">$172.000 COP</p>
       </div>
-    </article>
+    </a>
 
-    <article class="product-card">
+    <a href="#contacto" class="product-card">
       <div class="product-card__visual">🌸</div>
       <div class="product-card__body">
         <h3 class="product-card__name">Petal Smoke</h3>
         <p class="product-card__note">Rosa · Incienso · Cuero</p>
         <p class="product-card__price">$155.000 COP</p>
       </div>
-    </article>
+    </a>
 
   </div>
 
@@ -217,6 +199,7 @@
     <p class="section-header__eyebrow">Opiniones</p>
     <h2 class="section-header__title">Lo que <em>sienten</em><br>nuestros clientes</h2>
   </div>
+
 
   <!-- =====================================================
        BLOQUE: testimonial
@@ -281,10 +264,12 @@
     <h2 class="section-header__title">Planes <em>AURA</em></h2>
   </div>
 
+
   <!-- =====================================================
        BLOQUE: pricing-card
        Elementos: plan | price | period | features | feature-item | btn
        Modificadores: --featured
+       Nota: .pricing-card__btn es <a href="#contacto"> — sin JS
   ====================================================== -->
   <div class="pricing-grid">
 
@@ -298,7 +283,7 @@
         <li class="pricing-card__feature-item">Envío estándar</li>
         <li class="pricing-card__feature-item">Lista de deseos</li>
       </ul>
-      <button class="pricing-card__btn">Registrarse</button>
+      <a href="#contacto" class="pricing-card__btn">Registrarse</a>
     </article>
 
     <article class="pricing-card pricing-card--featured">
@@ -312,7 +297,7 @@
         <li class="pricing-card__feature-item">Descuento del 15%</li>
         <li class="pricing-card__feature-item">Kit de muestras mensual</li>
       </ul>
-      <button class="pricing-card__btn">Elegir Noir</button>
+      <a href="#contacto" class="pricing-card__btn">Elegir Noir</a>
     </article>
 
     <article class="pricing-card">
@@ -326,7 +311,7 @@
         <li class="pricing-card__feature-item">Ediciones limitadas</li>
         <li class="pricing-card__feature-item">Descuento del 25%</li>
       </ul>
-      <button class="pricing-card__btn">Contactar</button>
+      <a href="#contacto" class="pricing-card__btn">Contactar</a>
     </article>
 
   </div>
@@ -340,13 +325,11 @@
   ====================================================== -->
   <section class="contact" id="contacto">
     <div class="contact__inner">
-
       <form class="contact-form" novalidate>
 
         <h2 class="contact-form__title">Escríbe<em>nos</em></h2>
         <p class="contact-form__subtitle">
-          Respondemos en menos de 24 horas. También puedes escribirnos
-          para una consulta personalizada con nuestros perfumistas.
+          Responderemos con los datos de pago y envío en menos de 24 horas.
         </p>
 
         <div class="contact-form__field">
@@ -354,22 +337,31 @@
           <input type="text" class="contact-form__input" placeholder="Tu nombre completo" required>
         </div>
 
-        <!-- Campo con error — demuestra el modificador field--error -->
-        <div class="contact-form__field contact-form__field--error">
+        <div class="contact-form__field">
           <label class="contact-form__label">Email</label>
-          <input type="email" class="contact-form__input" placeholder="tu@correo.com" value="correo-invalido" required>
-          <span class="contact-form__error-message">Por favor ingresa un email válido.</span>
+          <input type="email" class="contact-form__input" placeholder="tu@correo.com" required>
         </div>
 
         <div class="contact-form__field">
-          <label class="contact-form__label">Mensaje</label>
-          <textarea class="contact-form__textarea" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          <label class="contact-form__label">Teléfono</label>
+          <input type="tel" class="contact-form__input" placeholder="+57 300 000 0000">
         </div>
 
-        <button type="submit" class="contact-form__submit">Enviar mensaje</button>
+        <!-- Modificador field--error activo — muestra el mensaje de error -->
+        <div class="contact-form__field contact-form__field--error">
+          <label class="contact-form__label">Ciudad</label>
+          <input type="text" class="contact-form__input" placeholder="Tu ciudad" required>
+          <span class="contact-form__error-message">Este campo es obligatorio.</span>
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label">Mensaje / Producto de interés</label>
+          <textarea class="contact-form__textarea" placeholder="Ej: Quiero el plan Noir y me interesa Velvet Oud." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-form__submit">Enviar pedido</button>
 
       </form>
-
     </div>
   </section>
 
@@ -382,7 +374,6 @@
        Modificadores: link--active
   ====================================================== -->
   <footer class="footer">
-
     <div class="footer__grid">
 
       <div class="footer__col">
@@ -399,20 +390,19 @@
       <div class="footer__col">
         <h4 class="footer__col-title">Colecciones</h4>
         <div class="footer__links">
-          <a href="#" class="footer__link footer__link--active">Unisex</a>
-          <a href="#" class="footer__link">Hombre</a>
-          <a href="#" class="footer__link">Mujer</a>
-          <a href="#" class="footer__link">Ediciones limitadas</a>
+          <a href="#catalogo" class="footer__link footer__link--active">Unisex</a>
+          <a href="#catalogo" class="footer__link">Hombre</a>
+          <a href="#catalogo" class="footer__link">Mujer</a>
+          <a href="#catalogo" class="footer__link">Ediciones limitadas</a>
         </div>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__col-title">Empresa</h4>
         <div class="footer__links">
-          <a href="#" class="footer__link">Sobre nosotros</a>
-          <a href="#" class="footer__link">Nuestro proceso</a>
-          <a href="#" class="footer__link">Blog</a>
-          <a href="#" class="footer__link">Trabaja con nosotros</a>
+          <a href="#nosotros" class="footer__link">Sobre nosotros</a>
+          <a href="#nosotros" class="footer__link">Nuestro proceso</a>
+          <a href="#contacto" class="footer__link">Contacto</a>
         </div>
       </div>
 
@@ -435,35 +425,7 @@
         <a href="#" class="footer__legal-link">Cookies</a>
       </div>
     </div>
-
   </footer>
-
-
-  <!-- =====================================================
-       JS: lógica de selección de categoría (selector)
-  ====================================================== -->
-  <script>
-    function selectCategory(cat) {
-      // Quita --active de todos los botones del selector
-      document.querySelectorAll('.selector__btn').forEach(btn => {
-        btn.classList.remove('selector__btn--active');
-      });
-      // Aplica --active al botón elegido
-      document.getElementById('btn-' + cat).classList.add('selector__btn--active');
-
-      // Actualiza el texto de la sección hero según la categoría
-      const titles = {
-        hombre:  { tag: 'Colección Hombre · 2025',  hero: 'Intensidad que<br><em>deja huella</em>', desc: 'Aromas amaderados y especiados, construidos para el hombre que sabe exactamente quién es.' },
-        mujer:   { tag: 'Colección Mujer · 2025',   hero: 'Delicadeza con<br><em>carácter propio</em>', desc: 'Florales, orientales y frescos. Fragancias que celebran la feminidad sin limitarla.' },
-        unisex:  { tag: 'Colección Unisex · 2025',  hero: 'Fragancias que<br><em>trascienden</em> géneros', desc: 'Aromas construidos sobre notas de oud, sándalo y ámbar gris. Diseñados para quienes no siguen convenciones, solo instintos.' }
-      };
-
-      const data = titles[cat];
-      document.querySelector('.hero__tag').textContent = data.tag;
-      document.querySelector('.hero__title').innerHTML = data.hero;
-      document.querySelector('.hero__desc').textContent = data.desc.replace(/<[^>]+>/g, '');
-    }
-  </script>
 
 </body>
 </html>
