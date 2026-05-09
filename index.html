@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA — Fragancias de autor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       BLOQUE: nav
+       Elementos: logo | links | link | cta
+       Modificadores: link--active
+  ====================================================== -->
+  <nav class="nav">
+    <div class="nav__inner">
+
+      <span class="nav__logo">AURA</span>
+
+      <div class="nav__links">
+        <a href="#inicio" class="nav__link nav__link--active">Inicio</a>
+        <a href="#catalogo" class="nav__link">Colecciones</a>
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </div>
+
+      <button class="nav__cta">Explorar</button>
+
+    </div>
+  </nav>
+
+
+  <!-- =====================================================
+       BLOQUE: selector
+       Elementos: eyebrow | title | subtitle | grid | btn | btn-icon
+       Modificadores: btn--active
+       Nota: JS cambia btn--active al hacer clic
+  ====================================================== -->
+  <section class="selector" id="inicio">
+
+    <p class="selector__eyebrow">Bienvenido a AURA</p>
+
+    <h1 class="selector__title">
+      El aroma que<br><em>te define</em>
+    </h1>
+
+    <p class="selector__subtitle">Elige tu preferencia y descubre tu colección</p>
+
+    <div class="selector__grid">
+
+      <button class="selector__btn" id="btn-hombre" onclick="selectCategory('hombre')">
+        <span class="selector__btn-icon">♂</span>
+        Hombre
+      </button>
+
+      <button class="selector__btn selector__btn--active" id="btn-unisex" onclick="selectCategory('unisex')">
+        <span class="selector__btn-icon">◈</span>
+        Unisex
+      </button>
+
+      <button class="selector__btn" id="btn-mujer" onclick="selectCategory('mujer')">
+        <span class="selector__btn-icon">♀</span>
+        Mujer
+      </button>
+
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+
+  <!-- =====================================================
+       BLOQUE: hero
+       Elementos: tag | title | desc | actions | btn
+       Modificadores: btn--outline
+  ====================================================== -->
+  <section class="hero" id="coleccion">
+
+    <span class="hero__tag">Colección Unisex · 2025</span>
+
+    <h2 class="hero__title">
+      Fragancias que<br><em>trascienden</em> géneros
+    </h2>
+
+    <p class="hero__desc">
+      Aromas construidos sobre notas de oud, sándalo y ámbar gris.
+      Diseñados para quienes no siguen convenciones, solo instintos.
+    </p>
+
+    <div class="hero__actions">
+      <button class="hero__btn">Ver colección</button>
+      <button class="hero__btn hero__btn--outline">Descubrir notas</button>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       BLOQUE: section-header (reutilizable)
+  ====================================================== -->
+  <div class="section-header" id="nosotros">
+    <p class="section-header__eyebrow">Por qué AURA</p>
+    <h2 class="section-header__title">Una fragancia,<br><em>una experiencia</em></h2>
+  </div>
+
+  <!-- =====================================================
+       BLOQUE: feature-card
+       Elementos: icon | title | desc
+       Modificadores: --featured
+  ====================================================== -->
+  <div class="features-grid">
+
+    <article class="feature-card feature-card--featured">
+      <div class="feature-card__icon">✦</div>
+      <h3 class="feature-card__title">Ingredientes nobles</h3>
+      <p class="feature-card__desc">
+        Seleccionamos cada nota en origen — Grasse, Oman, India — para garantizar
+        una calidad que se siente desde el primer contacto.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <div class="feature-card__icon">◷</div>
+      <h3 class="feature-card__title">Larga duración</h3>
+      <p class="feature-card__desc">
+        Fórmulas EDP de alta concentración que permanecen activas
+        hasta 12 horas sobre la piel.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <div class="feature-card__icon">◻</div>
+      <h3 class="feature-card__title">Empaque artesanal</h3>
+      <p class="feature-card__desc">
+        Cada frasco es diseñado y numerado a mano.
+        Packaging pensado para coleccionistas.
+      </p>
+    </article>
+
+    <article class="feature-card">
+      <div class="feature-card__icon">◉</div>
+      <h3 class="feature-card__title">Sin crueldad</h3>
+      <p class="feature-card__desc">
+        Cruelty-free y vegano certificado. Sin ingredientes de origen animal.
+        Comprometidos con el planeta.
+      </p>
+    </article>
+
+  </div>
+
+
+  <!-- =====================================================
+       BLOQUE: section-header (reutilizado)
+  ====================================================== -->
+  <div class="section-header" id="catalogo">
+    <p class="section-header__eyebrow">Catálogo</p>
+    <h2 class="section-header__title"><em>Colección</em> Unisex</h2>
+  </div>
+
+  <!-- =====================================================
+       BLOQUE: product-card
+       Elementos: visual | badge | body | name | note | price
+       Modificadores: --featured
+  ====================================================== -->
+  <div class="catalogue-grid">
+
+    <article class="product-card product-card--featured">
+      <div class="product-card__visual">
+        🌑
+        <span class="product-card__badge">Nuevo</span>
+      </div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Velvet Oud</h3>
+        <p class="product-card__note">Oud · Sándalo · Ámbar</p>
+        <p class="product-card__price">$189.000 COP</p>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__visual">🌿</div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Cedar Dusk</h3>
+        <p class="product-card__note">Cedro · Vetiver · Musgo</p>
+        <p class="product-card__price">$165.000 COP</p>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__visual">🌊</div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Eau Noire</h3>
+        <p class="product-card__note">Bergamota · Patchouli · Vainilla</p>
+        <p class="product-card__price">$172.000 COP</p>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-card__visual">🌸</div>
+      <div class="product-card__body">
+        <h3 class="product-card__name">Petal Smoke</h3>
+        <p class="product-card__note">Rosa · Incienso · Cuero</p>
+        <p class="product-card__price">$155.000 COP</p>
+      </div>
+    </article>
+
+  </div>
+
+
+  <!-- =====================================================
+       BLOQUE: section-header (reutilizado)
+  ====================================================== -->
+  <div class="section-header">
+    <p class="section-header__eyebrow">Opiniones</p>
+    <h2 class="section-header__title">Lo que <em>sienten</em><br>nuestros clientes</h2>
+  </div>
+
+  <!-- =====================================================
+       BLOQUE: testimonial
+       Elementos: mark | text | profile | avatar | name | role
+       Modificadores: --featured | --accent
+  ====================================================== -->
+  <div class="testimonials-grid">
+
+    <article class="testimonial testimonial--accent">
+      <div class="testimonial__mark">"</div>
+      <p class="testimonial__text">
+        Velvet Oud cambió mi rutina por completo. Es oscuro, cálido y elegante.
+        Recibo comentarios cada vez que lo uso.
+      </p>
+      <div class="testimonial__profile">
+        <div class="testimonial__avatar">CM</div>
+        <div>
+          <p class="testimonial__name">Camila M.</p>
+          <p class="testimonial__role">Diseñadora — Bogotá</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="testimonial testimonial--featured">
+      <div class="testimonial__mark">"</div>
+      <p class="testimonial__text">
+        Compré Cedar Dusk sin esperar mucho. Fue la mejor decisión del año.
+        La duración es increíble y el frasco es una obra de arte.
+      </p>
+      <div class="testimonial__profile">
+        <div class="testimonial__avatar">JR</div>
+        <div>
+          <p class="testimonial__name">Juan R.</p>
+          <p class="testimonial__role">Arquitecto — Medellín</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="testimonial">
+      <div class="testimonial__mark">"</div>
+      <p class="testimonial__text">
+        Por fin una marca que entiende que los aromas no tienen género.
+        Petal Smoke es perfecto para mí y para mi pareja.
+      </p>
+      <div class="testimonial__profile">
+        <div class="testimonial__avatar">LV</div>
+        <div>
+          <p class="testimonial__name">Laura V.</p>
+          <p class="testimonial__role">Fotógrafa — Cali</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+
+  <!-- =====================================================
+       BLOQUE: section-header (reutilizado)
+  ====================================================== -->
+  <div class="section-header">
+    <p class="section-header__eyebrow">Membresía</p>
+    <h2 class="section-header__title">Planes <em>AURA</em></h2>
+  </div>
+
+  <!-- =====================================================
+       BLOQUE: pricing-card
+       Elementos: plan | price | period | features | feature-item | btn
+       Modificadores: --featured
+  ====================================================== -->
+  <div class="pricing-grid">
+
+    <article class="pricing-card">
+      <p class="pricing-card__plan">Esencia</p>
+      <p class="pricing-card__price">$0<span>/mes</span></p>
+      <p class="pricing-card__period">Registro gratuito</p>
+      <ul class="pricing-card__features">
+        <li class="pricing-card__feature-item">Acceso al catálogo</li>
+        <li class="pricing-card__feature-item">1 muestra gratis al mes</li>
+        <li class="pricing-card__feature-item">Envío estándar</li>
+        <li class="pricing-card__feature-item">Lista de deseos</li>
+      </ul>
+      <button class="pricing-card__btn">Registrarse</button>
+    </article>
+
+    <article class="pricing-card pricing-card--featured">
+      <p class="pricing-card__plan">Noir</p>
+      <p class="pricing-card__price">$49<span>/mes</span></p>
+      <p class="pricing-card__period">USD · Cancela cuando quieras</p>
+      <ul class="pricing-card__features">
+        <li class="pricing-card__feature-item">Fragancias ilimitadas</li>
+        <li class="pricing-card__feature-item">Envío prioritario gratis</li>
+        <li class="pricing-card__feature-item">Acceso anticipado</li>
+        <li class="pricing-card__feature-item">Descuento del 15%</li>
+        <li class="pricing-card__feature-item">Kit de muestras mensual</li>
+      </ul>
+      <button class="pricing-card__btn">Elegir Noir</button>
+    </article>
+
+    <article class="pricing-card">
+      <p class="pricing-card__plan">Élite</p>
+      <p class="pricing-card__price">$99<span>/mes</span></p>
+      <p class="pricing-card__period">USD · Experiencia completa</p>
+      <ul class="pricing-card__features">
+        <li class="pricing-card__feature-item">Todo en Noir</li>
+        <li class="pricing-card__feature-item">Consulta con perfumista</li>
+        <li class="pricing-card__feature-item">Frasco personalizado</li>
+        <li class="pricing-card__feature-item">Ediciones limitadas</li>
+        <li class="pricing-card__feature-item">Descuento del 25%</li>
+      </ul>
+      <button class="pricing-card__btn">Contactar</button>
+    </article>
+
+  </div>
+
+
+  <!-- =====================================================
+       BLOQUE: contact-form
+       Elementos: title | subtitle | field | label | input |
+                  textarea | error-message | submit
+       Modificadores: field--error | submit--disabled
+  ====================================================== -->
+  <section class="contact" id="contacto">
+    <div class="contact__inner">
+
+      <form class="contact-form" novalidate>
+
+        <h2 class="contact-form__title">Escríbe<em>nos</em></h2>
+        <p class="contact-form__subtitle">
+          Respondemos en menos de 24 horas. También puedes escribirnos
+          para una consulta personalizada con nuestros perfumistas.
+        </p>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label">Nombre</label>
+          <input type="text" class="contact-form__input" placeholder="Tu nombre completo" required>
+        </div>
+
+        <!-- Campo con error — demuestra el modificador field--error -->
+        <div class="contact-form__field contact-form__field--error">
+          <label class="contact-form__label">Email</label>
+          <input type="email" class="contact-form__input" placeholder="tu@correo.com" value="correo-invalido" required>
+          <span class="contact-form__error-message">Por favor ingresa un email válido.</span>
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label">Mensaje</label>
+          <textarea class="contact-form__textarea" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        </div>
+
+        <button type="submit" class="contact-form__submit">Enviar mensaje</button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       BLOQUE: footer
+       Elementos: grid | col | logo | desc | contact-item |
+                  col-title | links | link | social | social-icon |
+                  bottom | copyright | legal | legal-link
+       Modificadores: link--active
+  ====================================================== -->
+  <footer class="footer">
+
+    <div class="footer__grid">
+
+      <div class="footer__col">
+        <div class="footer__logo">AURA</div>
+        <p class="footer__desc">
+          Fragancias de autor para quienes buscan algo más allá de lo ordinario.
+          Elaboradas con materias primas de origen único.
+        </p>
+        <p class="footer__contact-item">📍 Medellín, Colombia</p>
+        <p class="footer__contact-item">✉ hola@aura.co</p>
+        <p class="footer__contact-item">📞 +57 300 123 4567</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Colecciones</h4>
+        <div class="footer__links">
+          <a href="#" class="footer__link footer__link--active">Unisex</a>
+          <a href="#" class="footer__link">Hombre</a>
+          <a href="#" class="footer__link">Mujer</a>
+          <a href="#" class="footer__link">Ediciones limitadas</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Empresa</h4>
+        <div class="footer__links">
+          <a href="#" class="footer__link">Sobre nosotros</a>
+          <a href="#" class="footer__link">Nuestro proceso</a>
+          <a href="#" class="footer__link">Blog</a>
+          <a href="#" class="footer__link">Trabaja con nosotros</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-title">Redes sociales</h4>
+        <div class="footer__social">
+          <a href="#" class="footer__social-icon" title="Instagram">IG</a>
+          <a href="#" class="footer__social-icon" title="TikTok">TK</a>
+          <a href="#" class="footer__social-icon" title="Pinterest">PT</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copyright">© 2025 AURA. Todos los derechos reservados.</span>
+      <div class="footer__legal">
+        <a href="#" class="footer__legal-link">Términos</a>
+        <a href="#" class="footer__legal-link">Privacidad</a>
+        <a href="#" class="footer__legal-link">Cookies</a>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JS: lógica de selección de categoría (selector)
+  ====================================================== -->
+  <script>
+    function selectCategory(cat) {
+      // Quita --active de todos los botones del selector
+      document.querySelectorAll('.selector__btn').forEach(btn => {
+        btn.classList.remove('selector__btn--active');
+      });
+      // Aplica --active al botón elegido
+      document.getElementById('btn-' + cat).classList.add('selector__btn--active');
+
+      // Actualiza el texto de la sección hero según la categoría
+      const titles = {
+        hombre:  { tag: 'Colección Hombre · 2025',  hero: 'Intensidad que<br><em>deja huella</em>', desc: 'Aromas amaderados y especiados, construidos para el hombre que sabe exactamente quién es.' },
+        mujer:   { tag: 'Colección Mujer · 2025',   hero: 'Delicadeza con<br><em>carácter propio</em>', desc: 'Florales, orientales y frescos. Fragancias que celebran la feminidad sin limitarla.' },
+        unisex:  { tag: 'Colección Unisex · 2025',  hero: 'Fragancias que<br><em>trascienden</em> géneros', desc: 'Aromas construidos sobre notas de oud, sándalo y ámbar gris. Diseñados para quienes no siguen convenciones, solo instintos.' }
+      };
+
+      const data = titles[cat];
+      document.querySelector('.hero__tag').textContent = data.tag;
+      document.querySelector('.hero__title').innerHTML = data.hero;
+      document.querySelector('.hero__desc').textContent = data.desc.replace(/<[^>]+>/g, '');
+    }
+  </script>
+
+</body>
+</html>
